@@ -16,6 +16,7 @@
 #所用框架： <br />
  1.android-async-http-1.4.8.jar     网络库   http://www.oschina.net/p/android-async-http   <br />
  2.universal-image-loader-1.9.5.jar 图片缓存库   <br />
- 3. greendao-3.0.1.jar              超快ORM框架                https://github.com/greenrobot/greenDAO
+ 3. greendao-3.0.1.jar              超快ORM框架     这JP配置也太复杂了  https://github.com/greenrobot/greenDAO <br />
+ 4. ormlite-android-4.48.jar   ormlite-core-4.48.jar  算了用OrmLite             
 
 
