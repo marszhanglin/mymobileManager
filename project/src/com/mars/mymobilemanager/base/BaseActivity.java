@@ -1,5 +1,6 @@
 package com.mars.mymobilemanager.base;
 
+import net.mutil.util.L;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,15 +36,15 @@ public class BaseActivity extends Activity {
     protected void log(String strMsg, int level) {
     	switch (level) {
 		case 0:
-			Log.e(this.getPackageName(), strMsg); 
+			L.e( strMsg); 
 			break;
 		case 1:
 			if(logLevel<1)return;
-			Log.d(this.getPackageName(), strMsg); 
+			L.d( strMsg); 
 			break;
 		case 2:
 			if(logLevel<2)return;
-			Log.i(this.getPackageName(), strMsg); 
+			L.i( strMsg); 
 			break;
 		default:
 			break;

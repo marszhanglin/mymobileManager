@@ -1,9 +1,11 @@
-package com.mars.mymobilemanager;
+package com.mars.mymobilemanager.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.mars.mymobilemanager.R;
 
 public class MainActivity extends  Activity {
 
