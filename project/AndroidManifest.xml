@@ -29,6 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.mars.mymobilemanager.activity.MainActivity" />
+        <activity android:name="com.mars.mymobilemanager.activity.SettingActivity" />
+        
     </application>
 
 </manifest>

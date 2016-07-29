@@ -7,8 +7,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
+    <com.mars.mymobilemanager.view.FocusedTextView 
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="我是走马灯。。。单行并给我焦点。。。。。我就跑起来...但是焦点被listView抢走了、、、所以我要自定义一下下"
+        
+        />    
+       
+	<ListView 
+	    android:id="@+id/lv_funs"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	    
+	    /> 
 
- 
     </LinearLayout>
 
     <!-- 左侧菜单栏 -->
