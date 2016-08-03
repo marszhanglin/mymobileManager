@@ -3,12 +3,15 @@ package com.mars.mymobilemanager.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -39,11 +42,41 @@ public class MainActivity extends BaseActivity {
 		
 		lvFuns.setAdapter(new FunsListAdapter());
 		lvFuns.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			private AlertDialog alertDialog;
+
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				switch (position) {
-				case 0://手机防盗
+				case 0://手机防盗   
+					AlertDialog.Builder builder =new Builder(instance);
+					alertDialog = builder.create();
+					View dialogView = View.inflate(instance, R.layout.dialog_setpassword, null);
+					Button setpassword1=(Button) dialogView.findViewById(R.id.btn_setpassword_1);
+					setpassword1.setOnClickListener(new View.OnClickListener() {
+						
+						@Override
+						public void onClick(View v) {
+							toast("1点击", 0);
+							Intent intent =new Intent(MainActivity.this, LostFindStep1Activity.class);
+							startActivity(intent);
+							alertDialog.dismiss();
+							finish();
+						}
+					});
+					Button setpassword2=(Button) dialogView.findViewById(R.id.btn_setpassword_2);
+					setpassword2.setOnClickListener(new View.OnClickListener() {
+						
+						@Override
+						public void onClick(View v) {
+							toast("2点击", 0);
+							alertDialog.dismiss();
+						}
+					});
+					alertDialog.setView(dialogView, 0, 0, 0, 0);//边距为0
+//					alertDialog.setView(dialogView);
+					alertDialog.show();
+					
 					toast(listStr.get(position), 0);
 					break;
 				case 1://设置中心
@@ -71,6 +104,7 @@ public class MainActivity extends BaseActivity {
 					toast(listStr.get(position), 0);
 					Intent intent =new Intent(MainActivity.this, SettingActivity.class);
 					startActivity(intent);
+					finish();
 					break;
 				default:
 					break;

@@ -24,13 +24,15 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="com.mars.mymobilemanager.activity.MainActivity" />
         <activity android:name="com.mars.mymobilemanager.activity.SettingActivity" />
-        
+        <activity android:name="com.mars.mymobilemanager.activity.LostFindStep1Activity" />
+        <activity android:name="com.mars.mymobilemanager.activity.LostFindStep2Activity" />
+        <activity android:name="com.mars.mymobilemanager.activity.LostFindStep3Activity" />
+        <activity android:name="com.mars.mymobilemanager.activity.LostFindStep4Activity" />
     </application>
 
 </manifest>

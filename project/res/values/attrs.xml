@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+    
+    <declare-styleable name="settingitemview">
+        <attr name="title_text" format="string"/> 
+        <attr name="chk_is_on" format="boolean"/> 
+    </declare-styleable>
+    
+    
+    
+</resources>
+
